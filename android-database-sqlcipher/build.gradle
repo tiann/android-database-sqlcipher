@@ -1,6 +1,6 @@
 apply plugin: "com.android.library"
 apply from: "native.gradle"
-apply from: "maven.gradle"
+//apply from: "maven.gradle"
 
 android {
 
@@ -48,4 +48,14 @@ android {
     }
   }
 
+}
+
+apply plugin: 'com.novoda.bintray-release'
+publish {
+  userOrg = 'twsxtd'
+  groupId = 'me.weishu'
+  artifactId = 'android-database-sqlcipher'
+  publishVersion = '4.0.2'
+  desc = 'Android SQLite API based on SQLCipher'
+  website = 'https://github.com/tiann/android-database-sqlcipher.git'
 }
